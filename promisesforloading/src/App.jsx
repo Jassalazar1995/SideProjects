@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import orderPromise from './Pages/Promises'
 import './output.css'
+import { Link } from 'react-router-dom'
+
 function App() {
   // Setting the state
   const [message, setMessage] = useState('')
@@ -29,10 +31,19 @@ function App() {
   
 
   return (
+    <div>
+        <nav className="bg-gray-800 text-white p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-40">
+      <div className="flex gap-4">
+        <Link to='/home' className="hover:text-gray-300">
+          <div>Home</div>
+        </Link>
+        </div>
+    </nav>
     <div className = "flex justify-center items-center h-screen bg-gradient-to-t from-indigo-500 to-blue-500">
-<div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-      <h1 className="text-center text-2xl font-bold">Order Status:</h1>
-      <p className="text-center mt-4">{message}</p>
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+        <h1 className="text-center text-2xl font-bold">Order Status:</h1>
+        <p className="text-center mt-4">{message}</p>
+      </div>
     </div>
     </div>
   )
