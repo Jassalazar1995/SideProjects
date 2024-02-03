@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import orderPromise from './Pages/Promises'
-
+import './output.css'
 function App() {
   // Setting the state
   const [message, setMessage] = useState('')
@@ -29,9 +29,11 @@ function App() {
   
 
   return (
-    <div>
-      <h1>Order Status:</h1>
-      <p>{message}</p>
+    <div className = "flex justify-center items-center h-screen bg-gradient-to-t from-indigo-500 to-blue-500">
+<div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+      <h1 className="text-center text-2xl font-bold">Order Status:</h1>
+      <p className="text-center mt-4">{message}</p>
+    </div>
     </div>
   )
 }
