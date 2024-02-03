@@ -14,24 +14,15 @@ const inventory = {
   };
   
   // Creating the promise with the corrected executor function
-  const myFirstPromise = new Promise(myExecutor);
-  
-  // Function to process the order and update the webpage
-  function processOrder() {
-    myFirstPromise.then((message) => {
-      renderMessage(message);
-    }).catch((error) => {
-      renderMessage(error);
-    });
-  }
-  
-  // Function to render a message to the webpage
-  function renderMessage(message) {
-    const messageElement = document.createElement('div');
-    messageElement.textContent = message;
-    document.body.appendChild(messageElement);
-  }
-  
-  // Call processOrder to execute
-  processOrder();
+  const orderSunglasses = () => {
+    return new Promise(myExecutor);
+    }
+
+  // Saving the promise
+  const orderPromise = orderSunglasses()
+
+  console.log(orderPromise)
+
+export default orderPromise;
+
   
