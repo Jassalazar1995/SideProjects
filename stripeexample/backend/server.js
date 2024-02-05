@@ -27,7 +27,27 @@ app.get("/config", (req,res) => {
     });
 });
 
-app.post("/create-payment-intent", async(req, res) =>{})
+
+// Create Payment Intent
+app.post("/create-payment-intent", async(req, res) =>{
+    try {
+    const paymentIntent = await stripe.paymentIntents.create({
+        currency: "usd",
+        amount: 1999,
+        automatic_payment_methods: {
+            enabled: true,
+        },
+    });
+
+    res.send({ clientSecret: paymentIntent.client_secret })
+} catch(error) {
+    res.status(400).send({
+        error: {
+            message: error.message,
+        },
+    });
+}
+})
 
 app.listen(PORT, () => {
     console.log(`Listening at localhost:${PORT}`)
