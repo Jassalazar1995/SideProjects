@@ -9,28 +9,26 @@ function Payment() {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    fetch("/config").then(async (res) => {
-      const { publishableKey } = await res.json();
+    fetch("/config").then(async (r) => {
+      const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
     });
-  },[])
+  }, []);
 
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    fetch("/create-payment-intent",{
+    fetch("/create-payment-intent", {
       method: "POST",
-      body: JSON.stringify({}),  
-    }).then(async (res) => {
-      const { clientSecret } = await res.json();
+      body: JSON.stringify({}),
+    }).then(async (result) => {
+      var { clientSecret } = await result.json();
       setClientSecret(clientSecret);
     });
-  },[])
+  }, []);
 
   return (
     <>
       <h1>React Stripe and the Payment Element</h1>
-      {stripePromise && clientSecret && (
+      {clientSecret && stripePromise && (
         <Elements stripe={stripePromise} options={{ clientSecret }}>
           <CheckoutForm />
         </Elements>
