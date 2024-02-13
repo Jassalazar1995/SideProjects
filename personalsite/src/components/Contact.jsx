@@ -1,5 +1,10 @@
 function Contact() {
     return (
+      <div 
+      id ="contact"
+      className="w-full h-screen bg-black text-white min-h-screen"
+      >
+        <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
       <div className="max-w-lg mx-auto mt-10">
         <h1 className="text-3xl font-bold text-center">Contact</h1>
         <p className="mt-5 text-lg text-gray-700 text-center">
@@ -24,6 +29,9 @@ function Contact() {
           </button>
         </div>
       </div>
+      </div>
+      </div>
+
     );
   }
   

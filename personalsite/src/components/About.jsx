@@ -1,5 +1,9 @@
 function About() {
     return (
+      <div 
+      id ="about"
+      className="w-full h-screen bg-black text-white min-h-screen"
+      >
       <div className="max-w-4xl mx-auto mt-10">
         <h1 className="text-3xl font-bold text-center">About Me</h1>
         <p className="mt-5 text-lg text-gray-700">
@@ -9,6 +13,7 @@ function About() {
           is driven by a relentless pursuit of learning and a deep curiosity about the ever-evolving
           landscape of tech.
         </p>
+      </div>
       </div>
     );
   }
