@@ -8,7 +8,7 @@ function Projects() {
         {
           id: 1,
           title: "Project One",
-          description: "This is a brief description of Project One.",
+          description: "This is a project I have been wanting to make a reality for about 10 years. Since I first discovered my love for math when I was 17, I realized it was my future. A year or two later I realized I wanted to create a platform to allow people like me to be able to easily access math in a way that didn't feel pretenious or intimidating. This is what I want to make this website to be. This website is years of passion and vision culminating into a tangible object. It truly brings joy to my heart. ",
           images: ["images/journal/JournalHomePage.png", "images/journal/LoginPage.png"], 
           technologies: ["React", "Tailwind CSS", "Node.js"],
           demoUrl: "#",
