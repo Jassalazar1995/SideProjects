@@ -1,6 +1,12 @@
 const app = Vue.createApp({
-    // data, functions to react to events that we want
-    template: '<h2> I am the template</h2>'
+    data() {
+        return {
+            title: 'Half Blood Prince',
+            author: 'J.K. Rowling',
+            age: 45,
+            year: '2005'
+        }
+    }
 })
 
 app.mount('#app')
