@@ -1,3 +1,4 @@
+package ClassesAndObjects;
 public class Dog {
     String breed;
     boolean hasOwner;
