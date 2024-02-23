@@ -1,4 +1,4 @@
-package Java2;
+
 public class CombineNames {
   
 	public static void main(String[] args) {

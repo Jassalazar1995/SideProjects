@@ -1,4 +1,4 @@
-package Java2;
+
 
 // Importing the Random library
 import java.util.Random;

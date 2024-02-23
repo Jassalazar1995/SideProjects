@@ -1,4 +1,4 @@
-package Java2;
+
 // Import statement:
 import java.util.ArrayList;
 

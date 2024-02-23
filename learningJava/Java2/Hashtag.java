@@ -1,4 +1,4 @@
-package Java2;
+
 public class Hashtag {
   
     public static void main(String[] args) {

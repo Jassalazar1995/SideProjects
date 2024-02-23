@@ -1,4 +1,4 @@
-package Java2;
+
 /*
 A program that determines whether there is a protein in a stand of DNA.
 A protein has the following qualities: It begins with a start codon: ATG

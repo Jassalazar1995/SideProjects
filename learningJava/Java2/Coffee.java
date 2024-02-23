@@ -1,4 +1,4 @@
-package Java2;
+
 class Coffee {
   
     public static void main(String[] args) {
